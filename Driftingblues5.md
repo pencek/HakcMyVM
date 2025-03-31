@@ -84,7 +84,7 @@ Finished
 ```
 /wp-scan
 
-![输入图片说明](image/Driftingblues5/68ba1d8372624c2096cf45acf8f856a1.png)
+![输入图片说明](image/Driftingblues5/68bc576376e3464e95760f87a0c043e9.png)
 
 ```
 ┌──(kali㉿kali)-[~]
@@ -224,7 +224,7 @@ CeWL 6.2.1 (More Fixes) Robin Wood (robin@digi.ninja) (https://digi.ninja/)
 ```
 利用爆破出来的账号密码进行登陆网站，找到一个图片，下载下来
 
-![输入图片说明](image/Driftingblues5/68bc576376e3464e95760f87a0c043e9.png)
+![输入图片说明](image/Driftingblues5/9603559ff8aa4a87877937defce1c4fc.png)
 
 在里面找到了ssh登陆密码
 
@@ -330,7 +330,7 @@ drwx------ 2 gill gill 4096 Feb 24  2021 .ssh
 
 ```
 
-![输入图片说明](image/Driftingblues5/9603559ff8aa4a87877937defce1c4fc.png)
+![输入图片说明](image/Driftingblues5/68ba1d8372624c2096cf45acf8f856a1.png)
 
 把文件下载下来
 
