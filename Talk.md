@@ -70,6 +70,7 @@ Nmap done: 1 IP address (1 host up) scanned in 7.65 seconds
 目录扫描
 
 ```
+
 ┌──(kali㉿kali)-[~]
 └─$ gobuster dir -u http://192.168.21.8 -w /usr/share/wordlists/dirb/big.txt
 ===============================================================
