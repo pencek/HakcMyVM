@@ -78,11 +78,11 @@ Finished
 ```
 看一下都有什么
 
-![输入图片说明](image/Driftingblues6/61a9eebfd75743a79db88417f93c7e7a.png)
+![输入图片说明](image/61a9eebfd75743a79db88417f93c7e7a.png)
 
-![输入图片说明](image/Driftingblues6/7c6b2fbdd9d240959f4fdd9dd97ec107.png)
+![输入图片说明](image/7c6b2fbdd9d240959f4fdd9dd97ec107.png)
 
-![输入图片说明](image/Driftingblues6/0e4eef39a7fd4a28b04a602384dd76b2.png)
+![输入图片说明](image/0e4eef39a7fd4a28b04a602384dd76b2.png)
 
 让添加zip扩展名
 
@@ -118,7 +118,7 @@ Finished
 ```
 访问/spammer也会下载压缩包
 
-![输入图片说明](image/Driftingblues6/33adcc87a082403fbe67bb8f507d1e18.png)
+![输入图片说明](image/33adcc87a082403fbe67bb8f507d1e18.png)
 
 爆破
 
@@ -140,15 +140,15 @@ Session completed.
 ```
 解压一下看看有什么
 
-![输入图片说明](image/Driftingblues6/1839ddc462f545a198e5407af4808e78.png)
+![输入图片说明](image/1839ddc462f545a198e5407af4808e78.png)
 
 用账号密码登录一下刚才扫出来的登录页面
 
-![输入图片说明](image/Driftingblues6/fd474b8de76040efbf34502964a1d3df.png)
+![输入图片说明](image/fd474b8de76040efbf34502964a1d3df.png)
 
 能上传文件，上传个反弹shell看看
 
-![输入图片说明](image/Driftingblues6/248a2dc960c949b5a33ad36734df8c84.png)
+![输入图片说明](image/248a2dc960c949b5a33ad36734df8c84.png)
 
 ```
 ┌──(kali㉿kali)-[~]
@@ -181,7 +181,7 @@ Linux driftingblues 3.2.0-4-amd64 #1 SMP Debian 3.2.78-1 x86_64 GNU/Linux
 
 ```
 
-![输入图片说明](image/Driftingblues6/451daddc449e46bead40230c2cb89b7e.png)
+![输入图片说明](image/451daddc449e46bead40230c2cb89b7e.png)
 
 提权
 
