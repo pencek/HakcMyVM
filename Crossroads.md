@@ -76,7 +76,7 @@ Nmap done: 1 IP address (1 host up) scanned in 1.80 seconds
 # 漏洞利用
 先看一下80端口
 
-![输入图片说明](image/Crossroads/1.png)
+![输入图片说明](image/3af67723a71844b298df9a88b24a8ec6.png)
 
 目录扫描
 
@@ -109,11 +109,11 @@ Finished
 ```
 /robots.txt
 
-![输入图片说明](image/Crossroads/2.png)
+![输入图片说明](image/a8c5ad89eebe4928948908b6693dc078.png)
 
 /crossroads.png
 
-![输入图片说明](image/Crossroads/3.png)
+![输入图片说明](image/3bf0ff2a16e941299339613bf0adfd0c.png)
 
 没看到什么特别的，用enum4linux看一下smb
 
@@ -241,7 +241,7 @@ wrong password!!!
 ```
 看着好像是个字典
 
-![输入图片说明](image/Crossroads/4.png)
+![输入图片说明](image/013324bf368f439d96f69c23d54c0c1f.png)
 
 从大佬那里拿过来一个脚本
 
