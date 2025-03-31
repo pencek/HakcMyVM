@@ -90,7 +90,7 @@ Nmap done: 1 IP address (1 host up) scanned in 13.66 seconds
 ```
 看一下80端口有什么
 
-
+![输入图片说明](image/e612a0696195454d83acd5b4e27322fe.png)
 
 看一下有没有漏洞
 
@@ -228,14 +228,18 @@ Target: http://192.168.21.9/
 
 Task Completed 
 ```
-## burp
 找到了登录页面
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/fe704c6c3acd40c587faaed4636b0e52.png)
+
+![输入图片说明](image/fe704c6c3acd40c587faaed4636b0e52.png)
+
 从首页能看到应该有个admin用户
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/7844ab288b9b4f12af209eb0214fbd99.png)
+
+![输入图片说明](image/7844ab288b9b4f12af209eb0214fbd99.png)
+
 爆破一下密码
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/04d41ce6cddf4410bc229ed6c6eceaea.png)
-## msf
+
+![输入图片说明](image/04d41ce6cddf4410bc229ed6c6eceaea.png)
+
 试一下刚才那个漏洞
 
 ```bash
@@ -437,7 +441,9 @@ drwxr-xr-x 3 nico nico 4096 avril  1  2021 .local
 paul@debian:~$ sudo -u nico /usr/bin/base32 /home/nico/.secret.txt
 KVEGGZ2QKQ2GOYLOKZ5GIRRZOZRG2VTGMJLTS6K2KY4WSWSXKZ4USQJ5HUFA====
 ```
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/e46ea044c0cc4937a32456eb80213080.png)
+
+![输入图片说明](image/e46ea044c0cc4937a32456eb80213080.png)
+
 切换到了nico用户
 
 ```bash
@@ -508,7 +514,9 @@ StegSeek 0.6 - https://github.com/RickdeJager/StegSeek
 [i] Original filename: "note.txt".
 [i] Extracting to "homer.jpg.out".
 ```
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/40ec2fcf76654c3e888ccd2052b68913.png)
+
+![输入图片说明](image/40ec2fcf76654c3e888ccd2052b68913.png)
+
 在/tmp下创建一个goodgame里面写入fantanshell
 
 ```bash
