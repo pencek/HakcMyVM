@@ -54,12 +54,19 @@ Nmap done: 1 IP address (1 host up) scanned in 7.65 seconds
 ```
 
 # 漏洞利用
+
 先看一下80端口有什么
+
 ![输入图片说明](image/3e62ab1517854cbea07a8c8348e08a01.png)
+
 注册一下
+
 ![输入图片说明](image/bf7af9edd154435aa35ee40959dc30ac.png)
+
 登录进去看见一个聊天框
+
 ![输入图片说明](image/c33a95ff5716419f8adfac7588cf583e.png)
+
 目录扫描
 
 ```
