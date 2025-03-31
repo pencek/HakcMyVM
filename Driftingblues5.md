@@ -48,7 +48,7 @@ Nmap done: 1 IP address (1 host up) scanned in 8.08 seconds
 
 先看一下80端口
 
-![输入图片说明](image/Driftingblues5/2e3e4c5502214cde8add6fe31aeb7ab7.png)
+![输入图片说明](image/2e3e4c5502214cde8add6fe31aeb7ab7.png)
 
 目录扫描
 
@@ -84,7 +84,7 @@ Finished
 ```
 /wp-scan
 
-![输入图片说明](image/Driftingblues5/9603559ff8aa4a87877937defce1c4fc.png)
+![输入图片说明](image/9603559ff8aa4a87877937defce1c4fc.png)
 
 ```
 ┌──(kali㉿kali)-[~]
@@ -224,7 +224,7 @@ CeWL 6.2.1 (More Fixes) Robin Wood (robin@digi.ninja) (https://digi.ninja/)
 ```
 利用爆破出来的账号密码进行登陆网站，找到一个图片，下载下来
 
-![输入图片说明](image/Driftingblues5/68bc576376e3464e95760f87a0c043e9.png)
+![输入图片说明](image/68bc576376e3464e95760f87a0c043e9.png)
 
 在里面找到了ssh登陆密码
 
@@ -330,7 +330,7 @@ drwx------ 2 gill gill 4096 Feb 24  2021 .ssh
 
 ```
 
-![输入图片说明](image/Driftingblues5/68ba1d8372624c2096cf45acf8f856a1.png)
+![输入图片说明](image/68ba1d8372624c2096cf45acf8f856a1.png)
 
 把文件下载下来
 
