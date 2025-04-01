@@ -127,17 +127,24 @@ Finished
 ```
 /wordlist.txt
 得到一个字典，保存下来
+
 ![输入图片说明](image/aeb31ac3333e44d2b07d73fbe51e9c54.png)
 /setup.php
+
 ![输入图片说明](image/cc4123f2315549f1995bec22c4b67414.png)
 /admin.php
+
 ![输入图片说明](image/ef20adc1dedb4b0aa6015c748b70d425.png)
 拿刚才得到的字典爆破一下，爆破出来：admin/.:.yarrak.:.31
+
 ![输入图片说明](image/aeb48f5f96354125ad023f70347a27e9.png)
+
 ![输入图片说明](image/9d1b0fa46cfb4718b49a775924c68020.png)
 登陆成功
+
 ![输入图片说明](image/b6fcd0cc1d7441069cef1a6ac3aa2fc5.png)
 找一下漏洞吧
+
 ![输入图片说明](image/eb575dadc30c40fdb458cc6bb1e642aa.png)
 
 ```bash
