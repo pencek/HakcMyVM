@@ -96,7 +96,7 @@ Nmap done: 1 IP address (1 host up) scanned in 1.87 seconds
 # 漏洞利用
 80端口打开就是登录页面
 
-
+![输入图片说明](image/6df9eb71a39d45bba018de3f085aeaad.png)
 
 目录扫描报错了
 
@@ -120,9 +120,13 @@ Starting gobuster in directory enumeration mode
 
 Error: the server returns a status code that matches the provided options for non existing urls. http://192.168.21.10/a5a45188-92b9-4794-9363-8a307d39864a => 302 (Length: 242). To continue please exclude the status code or the length
 ```
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/e1d8b8dcf27743d8826577bac6070de7.png)
+
+![输入图片说明](image/e1d8b8dcf27743d8826577bac6070de7.png)
+
 看一下66端口
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/a223de8548504c3d83037d1d827143eb.png)
+
+![输入图片说明](image/a223de8548504c3d83037d1d827143eb.png)
+
 目录扫描一下
 
 ```bash
@@ -149,11 +153,17 @@ Finished
 ===============================================================
 ```
 /eon下载了一个文件
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/a34faf1c489c4f1fb0373ad5a29eb811.png)
+
+![输入图片说明](image/a34faf1c489c4f1fb0373ad5a29eb811.png)
+
 解密一下
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/24b282486e7c4dc4b46af173c2183aa0.png)
+
+![输入图片说明](image/24b282486e7c4dc4b46af173c2183aa0.png)
+
 找网站转一下
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/a10d4918c1f945d2850d5be77cfde84d.png)
+
+![输入图片说明](image/a10d4918c1f945d2850d5be77cfde84d.png)
+
 需要密码
 
 ```bash
@@ -186,10 +196,15 @@ Use the "--show" option to display all of the cracked passwords reliably
 Session completed.
 ```
 查看内容，得到了一个账号密码
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/5caac480901242bda1a8255bfe97f6f1.png)
+
+![输入图片说明](image/5caac480901242bda1a8255bfe97f6f1.png)
+
 登陆进80端口
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/ccdd8893a3bc43c08fcdd6acc9f82771.png)
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/afa4a2dc69894ca0bcfebb52c9ffe90e.png)
+
+![输入图片说明](image/ccdd8893a3bc43c08fcdd6acc9f82771.png)
+
+![输入图片说明](image/afa4a2dc69894ca0bcfebb52c9ffe90e.png)
+
 寻找可利用漏洞
 
 ```bash
