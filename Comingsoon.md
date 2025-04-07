@@ -68,7 +68,7 @@ Nmap done: 1 IP address (1 host up) scanned in 7.85 seconds
 
 80端口
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/24f418f562f54434acd14287597fb790.png)
+![输入图片说明](image/24f418f562f54434acd14287597fb790.png)
 
 目录扫描
 
@@ -108,7 +108,7 @@ Finished
 
 /notes.txt
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/b8a12b35d52549d3909163ade6f72688.png)
+![输入图片说明](image/b8a12b35d52549d3909163ade6f72688.png)
 
 尝试寻找敏感文件，没找到。
 在/index.php下找到一条注释，并且看到cookie不对劲，尝试解密
@@ -136,25 +136,25 @@ Finished
 <!-- Upload images link if EnableUploader set -->
 ```
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/2ac35226d3594793a0c29f3ac972e51a.png)
+![输入图片说明](image/2ac35226d3594793a0c29f3ac972e51a.png)
 
 尝试将cooke后面改为dHJ1ZQ==（true）
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/8a50148dbcd8426a89c46aea61bc785a.png)
+![输入图片说明](image/8a50148dbcd8426a89c46aea61bc785a.png)
 
 多出了一个上传按钮
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/70f8ac5a9f1e4d339a1b24efc789d605.png)
+![输入图片说明](image/70f8ac5a9f1e4d339a1b24efc789d605.png)
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/ed3c33e82aa246b59c54b8a85626ae51.png)
+![输入图片说明](image/ed3c33e82aa246b59c54b8a85626ae51.png)
 
 上传一个反弹shell
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/65678f4ba5c94546acfb8a1a7f576ff6.png)
+![输入图片说明](image/65678f4ba5c94546acfb8a1a7f576ff6.png)
 
 尝试绕过，成功用phar上传，上传以后会自动跳转到上传位置
 
-
+![输入图片说明](image/5128c9af7b1e4bd0838f73ed359e3e5e.png)
 
 反弹成功
 
