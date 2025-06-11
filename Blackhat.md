@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/cbc96dbf-8fd6-41b5-a1d1-0d2e5ab38f8f)# 信息搜集
+# 信息搜集
 
 主机发现
 
