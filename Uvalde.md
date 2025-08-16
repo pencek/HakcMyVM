@@ -1,4 +1,4 @@
-<img width="924" height="151" alt="图片" src="https://github.com/user-attachments/assets/92a6eb9c-0f19-494e-a236-e587453d5cdb" /># 信息搜集
+# 信息搜集
 
 主机发现
 
