@@ -1,4 +1,4 @@
-<img width="1046" height="697" alt="图片" src="https://github.com/user-attachments/assets/a2d0f632-0b92-49dd-a9d9-eed8e96ac072" /># 信息搜集
+# 信息搜集
 
 端口扫描
 
