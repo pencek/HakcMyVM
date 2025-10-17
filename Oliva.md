@@ -138,8 +138,6 @@ Yesthatsmypass!
 
 ssh连接
 
-寻找到nmap带capability，利用其读取到数据库的账号密码，从数据库中寻找到root的密码
-
 ```
 ┌──(kali㉿kali)-[/mnt/oliva]
 └─$ ssh oliva@192.168.2.9 
@@ -157,6 +155,8 @@ oliva@oliva:~$
 ```
 
 # 权限提升
+
+寻找到nmap带capability，利用其读取到数据库的账号密码，从数据库中寻找到root的密码
 
 ```
 oliva@oliva:~$ /usr/sbin/getcap -r / 2>/dev/null
