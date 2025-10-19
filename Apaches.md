@@ -99,7 +99,7 @@ Disallow: /
 # IOKAnFlvdSBrbm93IHlvdXIgcGF0aCwgY2hpbGQsIG5vdyBmb2xsb3cgaXQu4oCdCi0tIFBvY2Fob250YXMg
 ```
 
-![[Pasted image 20251019132230.png]]
+<img width="771" height="326" alt="图片" src="https://github.com/user-attachments/assets/fafb0660-79f4-4010-9548-2da131be1a28" />
 
 寻找相关漏洞
 
