@@ -139,11 +139,7 @@ d3b0o: Yes
 Since the result was a draw, we will let you enter the darkside, or at least temporarily, good luck kevin.
 ```
 
-我们拿到了用户名，尝试爆破，登陆以后得到了一串字符串
-
-
-
-解码出了：sfqekmgncutjhbypvxda.onion，查看一下
+我们拿到了用户名，尝试爆破，登陆以后得到了一串字符串，解码出了：sfqekmgncutjhbypvxda.onion，查看一下
 
 ```
 ┌──(kali㉿kali)-[~]
