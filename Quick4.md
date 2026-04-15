@@ -1,5 +1,4 @@
-
-信息搜集
+# 信息搜集
 
 主机发现
 
@@ -36,7 +35,7 @@ Service detection performed. Please report any incorrect results at https://nmap
 Nmap done: 1 IP address (1 host up) scanned in 8.10 seconds
 ```
 
-漏洞利用
+# 漏洞利用
 
 目录枚举
 
@@ -215,7 +214,7 @@ id
 uid=33(www-data) gid=33(www-data) groups=33(www-data)
 ```
 
-权限提升
+# 权限提升
 
 ```
 script /dev/null -c bash
