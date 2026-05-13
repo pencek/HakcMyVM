@@ -42,7 +42,7 @@ Nmap done: 1 IP address (1 host up) scanned in 12.92 seconds
 
 看一下http服务
 
-![img.png](img.png)
+<img width="1283" height="658" alt="图片" src="https://github.com/user-attachments/assets/920e041e-7d11-477b-af3b-431de867551d" />
 
 目录枚举
 
