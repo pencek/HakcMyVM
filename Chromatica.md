@@ -28,7 +28,7 @@ Nmap done: 1 IP address (1 host up) scanned in 17.81 seconds
 
 先看一下80端口有什么东西
 
-![img.png](img.png)
+<img width="1281" height="661" alt="图片" src="https://github.com/user-attachments/assets/e3068049-cc74-4084-a18d-fcadc02ceb3d" />
 
 目录枚举
 
@@ -172,7 +172,7 @@ Table: users
 
 破解一下密码
 
-![img_1.png](img_1.png)
+<img width="1270" height="223" alt="图片" src="https://github.com/user-attachments/assets/30a99338-ab81-4a69-9158-ef06135a12bb" />
 
 保存下来，尝试ssh登录
 
