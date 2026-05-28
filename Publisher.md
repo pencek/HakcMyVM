@@ -223,7 +223,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/us
 DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
 SSH_TTY=/dev/pts/0
 _=/usr/bin/env
-//看了大佬的wp，调用Linux动态链接器来启动 /bin/bash
+//ld-linux-x86-64.so.2是glibc的动态链接器。正常运行bash，内核是会自己找的。这里手动执行/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2 /bin/bash，本质是让动态链接器去加载bash。因为AppArmor限制的是/usr/sbin/ash，而profile没有正确限制ld-linux，所以通过它启动的bash没继承原来的限制，就能访问 /opt 了。
 think@publisher:~$ ls /lib/x86_64-linux-gnu/ | grep 'x86-64'
 ld-linux-x86-64.so.2
 libpyldb-util.cpython-38-x86-64-linux-gnu.so.2
